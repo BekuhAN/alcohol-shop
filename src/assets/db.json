@@ -36,5 +36,27 @@
       "name": "Квас, холодный чай",
       "bgImage": "category-bg-5.jpg"
     }
+  ],
+  "menu": [
+    {
+      "id": 1,
+      "name": "Главная",
+      "link": "/"
+    },
+    {
+      "id": 2,
+      "name": "Каталог",
+      "link": "/catalog"
+    },
+    {
+      "id": 3,
+      "name": "О нас",
+      "link": "/about"
+    },
+    {
+      "id": 4,
+      "name": "Контакты",
+      "link": "/contacts"
+    }
   ]
 }
