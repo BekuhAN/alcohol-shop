@@ -25,6 +25,7 @@ export default {
   color: inherit;
   text-decoration: none;
   list-style: none;
+  transition: inherit;
 }
 
 #nav {
