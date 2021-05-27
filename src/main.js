@@ -6,11 +6,23 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faArrowCircleLeft,
   faArrowCircleRight,
+  faClock,
+  faDollarSign,
+  faFish,
   faShoppingBasket,
+  faTruck,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-library.add(faShoppingBasket, faArrowCircleLeft, faArrowCircleRight);
+library.add(
+  faShoppingBasket,
+  faArrowCircleLeft,
+  faArrowCircleRight,
+  faFish,
+  faDollarSign,
+  faTruck,
+  faClock
+);
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 

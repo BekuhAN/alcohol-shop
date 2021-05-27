@@ -55,6 +55,52 @@
         </div>
       </div>
     </section>
+    <section class="ordered">
+      <div class="container">
+        <div class="row">
+          <div class="col-3 ordered__item">
+            <div class="image">
+              <font-awesome-icon class="icon" icon="fish" />
+            </div>
+            <div class="title">Качественная продукция</div>
+            <div class="description">
+              Мы работаем с лучшими поставщиками, чтобы предложить нашим
+              клиентам безалкогольные напитки высокого качества.
+            </div>
+          </div>
+          <div class="col-3 ordered__item">
+            <div class="image">
+              <font-awesome-icon class="icon" icon="dollar-sign" />
+            </div>
+            <div class="title">Доступные цены</div>
+            <div class="description">
+              Благодаря нашей доступной ценовой политике нашим клиентам не нужно
+              переплачивать за необходимые им товары.
+            </div>
+          </div>
+          <div class="col-3 ordered__item">
+            <div class="image">
+              <font-awesome-icon class="icon" icon="truck" />
+            </div>
+            <div class="title">Быстрая доставка</div>
+            <div class="description">
+              Наш магазин предлагает быструю доставку по всему миру для всех
+              клиентов, независимо от того, что и сколько вы заказываете.
+            </div>
+          </div>
+          <div class="col-3 ordered__item">
+            <div class="image">
+              <font-awesome-icon class="icon" icon="clock" />
+            </div>
+            <div class="title">Открыты 24/7</div>
+            <div class="description">
+              В отличие от других продуктовых магазинов, мы готовы обслуживать
+              вас 24/7 и предлагать лучший выбор товаров.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
@@ -197,6 +243,44 @@ export default {
     transition: 0.2s;
     &:hover {
       background: rgba(#e52029, 0.8);
+    }
+  }
+}
+.ordered {
+  background: url("../assets/img/bg-3.png") no-repeat;
+  background-size: auto 100%;
+  background-attachment: fixed;
+  padding: 100px 0;
+  position: relative;
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.8;
+  }
+  &__item {
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    .image {
+      font-size: 36px;
+      color: #e52029;
+    }
+    .title {
+      font-size: 18px;
+      text-transform: uppercase;
+      margin: 10px 0;
+      font-weight: bold;
+      transition: 0.2s;
+      cursor: pointer;
+      letter-spacing: 2px;
+      &:hover {
+        color: #e52029;
+      }
     }
   }
 }
