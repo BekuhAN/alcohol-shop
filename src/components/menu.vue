@@ -33,6 +33,7 @@ export default {
     padding: 0px 20px;
     transition: 0.2s;
     text-transform: uppercase;
+    font-size: 14px;
     &:hover,
     .router-link-exact-active {
       color: #e52029;

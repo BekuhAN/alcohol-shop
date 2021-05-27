@@ -3,10 +3,14 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faShoppingBasket } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowCircleLeft,
+  faArrowCircleRight,
+  faShoppingBasket,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-library.add(faShoppingBasket);
+library.add(faShoppingBasket, faArrowCircleLeft, faArrowCircleRight);
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 

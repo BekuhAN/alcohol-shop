@@ -44,7 +44,7 @@ export default {
     position: relative;
     .count {
       position: absolute;
-      font-size: 14px;
+      font-size: 12px;
       border: 3px solid #fff;
       background: #e52029;
       width: 24px;

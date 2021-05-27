@@ -8,6 +8,9 @@
 <script>
 import Header from "./components/header";
 export default {
+  data() {
+    return {};
+  },
   components: {
     Header,
   },
@@ -17,8 +20,12 @@ export default {
 <style lang="scss">
 #app {
   font-family: "Montserrat", sans-serif;
-  text-align: center;
   color: #2c3e50;
+}
+
+body {
+  margin: 0;
+  line-height: 1.5;
 }
 
 * {
