@@ -101,16 +101,38 @@
         </div>
       </div>
     </section>
+    <section class="new_products">
+      <div class="container">
+        <div class="section_title">Новинки</div>
+        <div class="row">
+          <ProductItem
+            :product="item"
+            v-for="(item, index) in listNewProducts"
+            :key="index"
+          />
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
 <script>
+import ProductItem from "../components/productItem";
+import axios from "axios";
 export default {
   name: "Home",
   data() {
     return {
       slideItem: 1,
+      listNewProducts: [],
     };
+  },
+  beforeMount() {
+    axios
+      .get("http://localhost:3000/products?new=true&_limit=8&_page=1")
+      .then(({ data }) => {
+        this.listNewProducts = data;
+      });
   },
   methods: {
     getImgUrl(image) {
@@ -131,11 +153,18 @@ export default {
       }
     },
   },
-  components: {},
+  components: { ProductItem },
 };
 </script>
 
 <style lang="scss">
+.section_title {
+  font-size: 42px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
 .slider {
   .container {
     position: relative;
@@ -220,13 +249,6 @@ export default {
   background-size: auto 130%;
   background-position-x: 180px;
   padding: 100px 0;
-  .section_title {
-    font-size: 42px;
-    letter-spacing: 3px;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-  }
   .btn {
     margin-top: 30px;
     z-index: 2;
@@ -248,7 +270,7 @@ export default {
 }
 .ordered {
   background: url("../assets/img/bg-3.png") no-repeat;
-  background-size: auto 100%;
+  background-size: 100% auto;
   background-attachment: fixed;
   padding: 100px 0;
   position: relative;
@@ -282,6 +304,12 @@ export default {
         color: #e52029;
       }
     }
+  }
+}
+.new_products {
+  padding: 100px 0;
+  .section_title {
+    text-align: center;
   }
 }
 </style>

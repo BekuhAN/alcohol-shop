@@ -6,9 +6,12 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faArrowCircleLeft,
   faArrowCircleRight,
+  faCartPlus,
   faClock,
   faDollarSign,
+  faEye,
   faFish,
+  faRubleSign,
   faShoppingBasket,
   faTruck,
 } from "@fortawesome/free-solid-svg-icons";
@@ -21,7 +24,10 @@ library.add(
   faFish,
   faDollarSign,
   faTruck,
-  faClock
+  faClock,
+  faRubleSign,
+  faCartPlus,
+  faEye
 );
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
