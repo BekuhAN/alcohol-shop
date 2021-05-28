@@ -113,11 +113,116 @@
         </div>
       </div>
     </section>
+    <section class="comments">
+      <div class="container">
+        <div class="section_title">Отзывы о нас</div>
+        <Carousel :itemCount="3"
+          ><div class="comments__item">
+            <div class="comments__item__wrapper">
+              <font-awesome-icon class="icon" icon="quote-left" />
+              <div class="message">
+                Должен сказать, что я действительно впечатлен своим недавним
+                заказом. Я уже покупал подобные продукты на других сайтах
+                раньше, но на этот раз я выбрал вас из-за вашего большого выбора
+                и цен.
+              </div>
+              <div class="user">
+                <div class="image"><img src="../assets/img/user-1.jpg" /></div>
+                <div class="name">Светлана</div>
+              </div>
+            </div>
+          </div>
+          <div class="comments__item">
+            <div class="comments__item__wrapper">
+              <font-awesome-icon class="icon" icon="quote-left" />
+              <div class="message">
+                Я только что получил свой заказ и был по-настоящему поражен. Он
+                был так хорошо упакован, и вещи замечательные. Я новичок в том,
+                чтобы заказывать еду онлайн, но это был отличный опыт.
+              </div>
+              <div class="user">
+                <div class="image"><img src="../assets/img/user-2.jpg" /></div>
+                <div class="name">Николай</div>
+              </div>
+            </div>
+          </div>
+          <div class="comments__item">
+            <div class="comments__item__wrapper">
+              <font-awesome-icon class="icon" icon="quote-left" />
+              <div class="message">
+                Я получил свой большой заказ сырых веганских продуктов сегодня
+                через UPS и был очень впечатлен упаковкой и свежестью, а также
+                качеством моих блюд.
+              </div>
+              <div class="user">
+                <div class="image"><img src="../assets/img/user-3.jpg" /></div>
+                <div class="name">Валерия</div>
+              </div>
+            </div>
+          </div>
+        </Carousel>
+      </div>
+    </section>
+    <section class="sale_products">
+      <div class="container">
+        <div class="section_title">Скидки</div>
+        <div class="row">
+          <ProductItem
+            :product="item"
+            v-for="(item, index) in listSaleProducts"
+            :key="index"
+          />
+        </div>
+      </div>
+    </section>
+    <section class="brands">
+      <div class="container">
+        <Carousel :itemCount="2">
+          <div class="col-2 brands__item">
+            <img src="../assets/img/brand-1.png" />
+          </div>
+          <div class="col-2 brands__item">
+            <img src="../assets/img/brand-2.png" />
+          </div>
+          <div class="col-2 brands__item">
+            <img src="../assets/img/brand-3.png" />
+          </div>
+          <div class="col-2 brands__item">
+            <img src="../assets/img/brand-4.png" />
+          </div>
+          <div class="col-2 brands__item">
+            <img src="../assets/img/brand-5.png" />
+          </div>
+          <div class="col-2 brands__item">
+            <img src="../assets/img/brand-6.png" />
+          </div>
+          <div class="col-2 brands__item">
+            <img src="../assets/img/brand-7.png" />
+          </div>
+          <div class="col-2 brands__item">
+            <img src="../assets/img/brand-8.png" />
+          </div>
+          <div class="col-2 brands__item">
+            <img src="../assets/img/brand-9.png" />
+          </div>
+          <div class="col-2 brands__item">
+            <img src="../assets/img/brand-10.png" />
+          </div>
+          <div class="col-2 brands__item">
+            <img src="../assets/img/brand-11.png" />
+          </div>
+          <div class="col-2 brands__item">
+            <img src="../assets/img/brand-12.png" />
+          </div>
+        </Carousel>
+      </div>
+    </section>
   </main>
 </template>
 
 <script>
 import ProductItem from "../components/productItem";
+import Carousel from "../components/carousel";
 import axios from "axios";
 export default {
   name: "Home",
@@ -125,6 +230,7 @@ export default {
     return {
       slideItem: 1,
       listNewProducts: [],
+      listSaleProducts: [],
     };
   },
   beforeMount() {
@@ -133,6 +239,15 @@ export default {
       .then(({ data }) => {
         this.listNewProducts = data;
       });
+    axios.get("http://localhost:3000/products").then(({ data }) => {
+      let arr = 0;
+      for (let i = 0; i < data.length; i++) {
+        if (data[i].sale > 0 && arr < 8) {
+          this.listSaleProducts.push(data[i]);
+          arr++;
+        }
+      }
+    });
   },
   methods: {
     getImgUrl(image) {
@@ -153,7 +268,7 @@ export default {
       }
     },
   },
-  components: { ProductItem },
+  components: { ProductItem, Carousel },
 };
 </script>
 
@@ -168,6 +283,15 @@ export default {
 .slider {
   .container {
     position: relative;
+    overflow: hidden;
+    &:hover {
+      .slider__next {
+        right: 30px;
+      }
+      .slider__prev {
+        left: 30px;
+      }
+    }
   }
   &__item {
     height: 500px;
@@ -238,10 +362,10 @@ export default {
     }
   }
   &__next {
-    right: 30px;
+    right: -30px;
   }
   &__prev {
-    left: 30px;
+    left: -30px;
   }
 }
 .about {
@@ -310,6 +434,121 @@ export default {
   padding: 100px 0;
   .section_title {
     text-align: center;
+    margin-bottom: 50px;
+  }
+}
+.comments {
+  background: url("../assets/img/bg-4.jpg") no-repeat;
+  background-size: auto 100%;
+  background-position-x: center;
+  padding: 100px 0;
+  .section_title {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .carousel {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 80%;
+      height: 70%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      opacity: 0.6;
+      border-radius: 60px;
+    }
+  }
+  &__item {
+    flex: 0 0 1110px;
+    padding: 30px 0;
+    z-index: 2;
+    &__wrapper {
+      width: 70%;
+      margin: 0 auto;
+      box-shadow: 0 0 18px 0 rgba(#000, 0.13);
+      background: #ffffff;
+      border-radius: 60px;
+      padding: 70px 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .icon {
+        color: #e52029;
+        font-size: 38px;
+        opacity: 0.5;
+      }
+      .message {
+        text-align: center;
+        font-weight: 500;
+        font-style: italic;
+        margin: 30px 0;
+        color: #777;
+      }
+      .user {
+        display: flex;
+        align-items: center;
+        .image {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          overflow: hidden;
+          img {
+            height: 100%;
+          }
+        }
+        .name {
+          text-transform: uppercase;
+          font-weight: bold;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}
+.sale_products {
+  padding: 100px 0;
+  .section_title {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
+.brands {
+  padding: 100px 0;
+  background: url("../assets/img/bg-2.jpg") no-repeat;
+  background-size: 100% auto;
+  background-position-y: center;
+  position: relative;
+  .carousel__next,
+  .carousel__prev {
+    opacity: 0.4;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    background: #aaa;
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  &__item {
+    flex: 0 0 185px;
+    overflow: hidden;
+    filter: grayscale(100%);
+    &:hover {
+      filter: grayscale(0);
+    }
+    img {
+      width: 100%;
+    }
   }
 }
 </style>

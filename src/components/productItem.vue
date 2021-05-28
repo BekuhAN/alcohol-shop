@@ -33,6 +33,11 @@
 <script>
 export default {
   props: ["product"],
+  data() {
+    return {
+      isModal: false,
+    };
+  },
   methods: {
     getImgUrl(image) {
       return require("../assets/img/" + image);
@@ -101,6 +106,16 @@ export default {
       font-size: 18px;
       .icon {
         font-size: 16px;
+      }
+      .sale_price {
+        color: #2c3e50;
+        font-weight: 400;
+        margin-right: 20px;
+        font-size: 14px;
+        text-decoration: line-through;
+        .icon {
+          font-size: 14px;
+        }
       }
     }
   }

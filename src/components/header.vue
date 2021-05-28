@@ -3,7 +3,9 @@
     <div class="container">
       <div class="row header">
         <div class="logo">
-          <figure><img src="../assets/logo.png" /></figure>
+          <figure>
+            <router-link to="/"><img src="../assets/logo.png" /></router-link>
+          </figure>
         </div>
         <Menu />
         <div class="cart">
