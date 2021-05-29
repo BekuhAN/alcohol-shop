@@ -1198,6 +1198,11 @@
     },
     {
       "id": 4,
+      "name": "Доставка",
+      "link": "/delivery"
+    },
+    {
+      "id": 5,
       "name": "Контакты",
       "link": "/contacts"
     }
