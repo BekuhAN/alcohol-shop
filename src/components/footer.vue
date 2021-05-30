@@ -81,10 +81,10 @@ export default {
       const self = this;
       emailjs
         .sendForm(
-          "service_8pffxs3",
-          "template_5ch3p2a",
+          "service_6ug1j49",
+          "template_rl67vah",
           e.target,
-          "user_XYpsO08lyi9FfEIXnCKaK"
+          "user_asVfLe2pvY0fqO1TJZBTL"
         )
         .then(
           (result) => {

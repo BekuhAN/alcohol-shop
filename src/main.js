@@ -28,6 +28,8 @@ import {
   faVk,
 } from "@fortawesome/free-brands-svg-icons";
 import { faPaperPlane } from "@fortawesome/free-regular-svg-icons";
+import VueTheMask from "vue-the-mask";
+Vue.use(VueTheMask);
 
 library.add(
   faShoppingBasket,
