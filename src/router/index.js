@@ -4,6 +4,7 @@ import Home from "../views/Home";
 import About from "../views/About";
 import Delivery from "../views/Delivery";
 import Contacts from "../views/Contacts";
+import Catalog from "../views/Catalog";
 
 Vue.use(VueRouter);
 
@@ -27,6 +28,11 @@ const routes = [
     path: "/contacts",
     name: "Contacts",
     component: Contacts,
+  },
+  {
+    path: "/catalog",
+    name: "Catalog",
+    component: Catalog,
   },
 ];
 
