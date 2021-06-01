@@ -34,9 +34,9 @@
           "value": "1"
         }
       ],
-      "price": 53,
+      "price": 40,
       "image": "product-1.jpg",
-      "sale": 15,
+      "oldPrice": 53,
       "new": false,
       "categoryId": 1
     },
@@ -76,7 +76,7 @@
       ],
       "price": 22,
       "image": "product-2.jpg",
-      "sale": 0,
+      "oldPrice": 0,
       "new": true,
       "categoryId": 1
     },
@@ -116,7 +116,7 @@
       ],
       "price": 79,
       "image": "product-3.jpg",
-      "sale": 0,
+      "oldPrice": 0,
       "new": true,
       "categoryId": 1
     },
@@ -154,9 +154,9 @@
           "value": "1,126"
         }
       ],
-      "price": 77,
+      "price": 55,
       "image": "product-4.jpg",
-      "sale": 20,
+      "oldPrice": 77,
       "new": false,
       "categoryId": 1
     },
@@ -194,9 +194,9 @@
           "value": "1,05"
         }
       ],
-      "price": 56,
+      "price": 45,
       "image": "product-5.jpg",
-      "sale": 10,
+      "oldPrice": 56,
       "new": false,
       "categoryId": 1
     },
@@ -236,7 +236,7 @@
       ],
       "price": 71,
       "image": "product-6.jpg",
-      "sale": 0,
+      "oldPrice": 0,
       "new": false,
       "categoryId": 1
     },
@@ -276,7 +276,7 @@
       ],
       "price": 736,
       "image": "product-7.jpg",
-      "sale": 0,
+      "oldPrice": 0,
       "new": false,
       "categoryId": 1
     },
@@ -316,7 +316,7 @@
       ],
       "price": 41,
       "image": "product-8.jpg",
-      "sale": 0,
+      "oldPrice": 0,
       "new": false,
       "categoryId": 1
     },
@@ -348,7 +348,7 @@
       ],
       "price": 82,
       "image": "product-9.jpg",
-      "sale": 0,
+      "oldPrice": 0,
       "new": true,
       "categoryId": 2
     },
@@ -380,7 +380,7 @@
       ],
       "price": 89,
       "image": "product-10.jpeg",
-      "sale": 0,
+      "oldPrice": 0,
       "new": true,
       "categoryId": 2
     },
@@ -410,9 +410,9 @@
           "value": "1,5"
         }
       ],
-      "price": 29,
+      "price": 25,
       "image": "product-11.jpg",
-      "sale": 25,
+      "oldPrice": 30,
       "new": false,
       "categoryId": 2
     },
@@ -442,9 +442,9 @@
           "value": "1,5"
         }
       ],
-      "price": 29,
+      "price": 25,
       "image": "product-12.jpg",
-      "sale": 25,
+      "oldPrice": 30,
       "new": false,
       "categoryId": 2
     },
@@ -476,7 +476,7 @@
       ],
       "price": 32,
       "image": "product-13.jpg",
-      "sale": 0,
+      "oldPrice": 0,
       "new": false,
       "categoryId": 2
     },
@@ -508,7 +508,7 @@
       ],
       "price": 33,
       "image": "product-14.jpg",
-      "sale": 0,
+      "oldPrice": 0,
       "new": false,
       "categoryId": 2
     },
@@ -540,7 +540,7 @@
       ],
       "price": 38,
       "image": "product-15.jpg",
-      "sale": 0,
+      "oldPrice": 0,
       "new": false,
       "categoryId": 2
     },
@@ -571,8 +571,8 @@
         }
       ],
       "price": 101,
-      "image": "product-16.jpg",
-      "sale": 0,
+      "image": "product-16.jpeg",
+      "oldPrice": 0,
       "new": false,
       "categoryId": 2
     },
@@ -604,7 +604,7 @@
       ],
       "price": 71,
       "image": "product-17.jpg",
-      "sale": 0,
+      "oldPrice": 0,
       "new": true,
       "categoryId": 3
     },
@@ -636,7 +636,7 @@
       ],
       "price": 71,
       "image": "product-18.jpg",
-      "sale": 0,
+      "oldPrice": 0,
       "new": true,
       "categoryId": 3
     },
@@ -666,9 +666,9 @@
           "value": "0,53"
         }
       ],
-      "price": 143,
+      "price": 120,
       "image": "product-19.jpg",
-      "sale": 20,
+      "oldPrice": 143,
       "new": false,
       "categoryId": 3
     },
@@ -700,7 +700,7 @@
       ],
       "price": 110,
       "image": "product-20.jpg",
-      "sale": 0,
+      "oldPrice": 0,
       "new": false,
       "categoryId": 3
     },
@@ -732,7 +732,7 @@
       ],
       "price": 72,
       "image": "product-21.jpg",
-      "sale": 0,
+      "oldPrice": 0,
       "new": false,
       "categoryId": 3
     },
@@ -764,7 +764,7 @@
       ],
       "price": 85,
       "image": "product-22.jpg",
-      "sale": 0,
+      "oldPrice": 0,
       "new": false,
       "categoryId": 3
     },
@@ -796,7 +796,7 @@
       ],
       "price": 59,
       "image": "product-23.jpg",
-      "sale": 0,
+      "oldPrice": 0,
       "new": false,
       "categoryId": 4
     },
@@ -828,7 +828,7 @@
       ],
       "price": 27,
       "image": "product-24.jpg",
-      "sale": 0,
+      "oldPrice": 0,
       "new": false,
       "categoryId": 4
     },
@@ -860,7 +860,7 @@
       ],
       "price": 121,
       "image": "product-25.jpg",
-      "sale": 0,
+      "oldPrice": 0,
       "new": false,
       "categoryId": 4
     },
@@ -892,7 +892,7 @@
       ],
       "price": 28,
       "image": "product-26.jpg",
-      "sale": 0,
+      "oldPrice": 0,
       "new": false,
       "categoryId": 4
     },
@@ -924,7 +924,7 @@
       ],
       "price": 59,
       "image": "product-27.jpg",
-      "sale": 0,
+      "oldPrice": 0,
       "new": false,
       "categoryId": 4
     },
@@ -956,7 +956,7 @@
       ],
       "price": 66,
       "image": "product-28.jpg",
-      "sale": 0,
+      "oldPrice": 0,
       "new": false,
       "categoryId": 4
     },
@@ -988,7 +988,7 @@
       ],
       "price": 102,
       "image": "product-29.jpeg",
-      "sale": 0,
+      "oldPrice": 0,
       "new": true,
       "categoryId": 5
     },
@@ -1020,7 +1020,7 @@
       ],
       "price": 37,
       "image": "product-30.jpg",
-      "sale": 0,
+      "oldPrice": 0,
       "new": false,
       "categoryId": 5
     },
@@ -1052,7 +1052,7 @@
       ],
       "price": 64,
       "image": "product-31.jpg",
-      "sale": 0,
+      "oldPrice": 0,
       "new": false,
       "categoryId": 5
     },
@@ -1083,8 +1083,8 @@
         }
       ],
       "price": 55,
-      "image": "product-32.jpg",
-      "sale": 0,
+      "image": "product-32.png",
+      "oldPrice": 0,
       "new": false,
       "categoryId": 5
     },
@@ -1116,7 +1116,7 @@
       ],
       "price": 38,
       "image": "",
-      "sale": 0,
+      "oldPrice": 0,
       "new": false,
       "categoryId": 5
     },
@@ -1148,7 +1148,7 @@
       ],
       "price": 67,
       "image": "",
-      "sale": 0,
+      "oldPrice": 0,
       "new": false,
       "categoryId": 5
     }

@@ -2,19 +2,21 @@
   <div class="col-3 product_item">
     <figure class="image">
       <img v-if="product.image" :src="getImgUrl(product.image)" />
-      <img v-else src="../assets/img/no-photo.png" />
-      <div v-if="product.sale" class="sale">- {{ product.sale }}%</div>
+      <img class="no_image" v-else src="../assets/img/no-photo.png" />
+      <div v-if="product.oldPrice" class="sale">
+        - {{ Math.ceil(100 - (product.price / product.oldPrice) * 100) }}%
+      </div>
       <div v-if="product.new" class="new">Новинка</div>
     </figure>
     <div class="description">
       <div class="name">{{ product.title }}</div>
       <div class="prices">
-        <div class="before_sale" :class="{ sale_price: product.sale }">
+        <div class="before_sale">
           {{ product.price }}
           <font-awesome-icon class="icon" icon="ruble-sign" />
         </div>
-        <div v-if="product.sale" class="after_sale">
-          {{ Math.ceil(product.price - (product.price * product.sale) / 100)
+        <div v-if="product.oldPrice" class="after_sale sale_price">
+          {{ product.oldPrice
           }}<font-awesome-icon class="icon" icon="ruble-sign" />
         </div>
       </div>
@@ -39,7 +41,10 @@
             <figure>
               <img v-if="product.image" :src="getImgUrl(product.image)" />
               <img v-else src="../assets/img/no-photo.png" />
-              <div v-if="product.sale" class="sale">- {{ product.sale }}%</div>
+              <div v-if="product.oldPrice" class="sale">
+                -
+                {{ Math.ceil(100 - (product.oldPrice / product.price) * 100) }}%
+              </div>
               <div v-if="product.new" class="new">Новинка</div>
             </figure>
           </div>
@@ -67,15 +72,12 @@
             </div>
             <div class="product_item__modal__body__footer">
               <div class="prices">
-                <div class="before_sale" :class="{ sale_price: product.sale }">
+                <div class="before_sale">
                   {{ product.price }}
                   <font-awesome-icon class="icon" icon="ruble-sign" />
                 </div>
-                <div v-if="product.sale" class="after_sale">
-                  {{
-                    Math.ceil(
-                      product.price - (product.price * product.sale) / 100
-                    )
+                <div v-if="product.oldPrice" class="after_sale sale_price">
+                  {{ product.oldPrice
                   }}<font-awesome-icon class="icon" icon="ruble-sign" />
                 </div>
               </div>
@@ -149,6 +151,9 @@ export default {
     img {
       height: 100%;
     }
+    .no_image {
+      height: auto;
+    }
   }
   .sale,
   .new {
@@ -190,7 +195,7 @@ export default {
       .sale_price {
         color: #2c3e50;
         font-weight: 400;
-        margin-right: 20px;
+        margin-left: 20px;
         font-size: 14px;
         text-decoration: line-through;
         .icon {
@@ -324,7 +329,7 @@ export default {
           .sale_price {
             color: #2c3e50;
             font-weight: 400;
-            margin-right: 20px;
+            margin-left: 20px;
             font-size: 14px;
             text-decoration: line-through;
             .icon {

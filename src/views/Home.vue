@@ -9,7 +9,7 @@
         >
           <div class="slider__item__title">Скидки до 25%</div>
           <div class="slider__item__sub_title">на напитки Coca-Cola</div>
-          <router-link class="btn" to="/products">Подробнее</router-link>
+          <router-link class="btn" to="/catalog">Подробнее</router-link>
         </div>
         <div
           class="slider__item"
@@ -20,7 +20,7 @@
           <div class="slider__item__sub_title">
             на энергетические напитки Adrenaline
           </div>
-          <router-link class="btn" to="/products">Подробнее</router-link>
+          <router-link class="btn" to="/catalog">Подробнее</router-link>
         </div>
         <div
           class="slider__item"
@@ -29,7 +29,7 @@
         >
           <div class="slider__item__title">Скидки до 40%</div>
           <div class="slider__item__sub_title">на напитки Fanta</div>
-          <router-link class="btn" to="/products">Подробнее</router-link>
+          <router-link class="btn" to="/catalog">Подробнее</router-link>
         </div>
         <div class="slider__prev" @click="sliderPrev">
           <font-awesome-icon class="icon" icon="arrow-circle-left" />

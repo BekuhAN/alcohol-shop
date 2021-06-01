@@ -40,12 +40,12 @@
           </ul>
         </div>
         <div class="col-9 catalog_list">
-          <div class="col-12 filter_products">
+          <div class="col-12 filter_catalog">
             Сортировка
             <select
               v-model="sortSelected"
               @change="sorting"
-              class="filter_products__list"
+              class="filter_catalog__list"
             >
               <option selected value="">По умолчанию</option>
               <option value="title_asc">По имени: A-Z</option>
@@ -60,6 +60,17 @@
               v-for="(item, index) in listProducts"
               :key="index"
             />
+          </div>
+          <div class="pagination">
+            <router-link
+              :to="{ path: '/catalog', query: { _page: index } }"
+              class="page"
+              :class="{ active: isActive(index) }"
+              v-for="index in selectCategory"
+              :key="index"
+            >
+              {{ index }}
+            </router-link>
           </div>
         </div>
       </div>
@@ -81,6 +92,7 @@ export default {
       sortSelected: "",
       activeCategory: [],
       selectedIdCategory: null,
+      isVisible: true,
       list: [],
     };
   },
@@ -123,11 +135,14 @@ export default {
       this.activeCategory = cat;
       this.selectedIdCategory = cat.categoryId;
     },
+    isActive(index) {
+      return this.$route.query._page == index;
+    },
   },
   beforeMount() {
     axios
       .get("http://localhost:3000/products")
-      .then((resp) => (this.list = resp.data));
+      .then((resp) => (this.list = this.countProducts = resp.data));
     this.fetchData();
     this.selectedIdCategory = this.$route.query.categoryId;
   },
@@ -179,6 +194,39 @@ export default {
           transform: translateY(-50%);
         }
       }
+    }
+  }
+  .catalog_list {
+    .pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 50px;
+      .page {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #e52029;
+        height: 40px;
+        width: 40px;
+        margin: 0px 5px;
+        border-radius: 5px;
+        transition: 0.2s;
+        &.active,
+        &:hover {
+          background: #e52029;
+          color: #fff;
+        }
+      }
+    }
+  }
+  .filter_catalog {
+    padding-bottom: 20px;
+    padding-left: 0;
+    &__list {
+      height: 25px;
+      padding-left: 10px;
+      font-family: "Montserrat", sans-serif;
     }
   }
 }
