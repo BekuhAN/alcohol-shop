@@ -36,7 +36,7 @@ export default new Vuex.Store({
       state.listProducts = payload;
     },
     updateListCart(state, payload) {
-      state.listCart = payload;
+      state.cart = payload;
     },
   },
   actions: {
@@ -56,9 +56,14 @@ export default new Vuex.Store({
         .then(({ data }) => commit("updateListProducts", data));
     },
     addListCart({ state, commit }, item) {
-      let arr = state.cart;
-      arr.push(item);
+      commit("updateListCart", [...state.cart, item]);
+    },
+    deleteListCart({ state, commit }, item) {
+      const arr = state.cart.filter((e) => e.id !== item.id);
       commit("updateListCart", arr);
+    },
+    clearListCart({ commit }) {
+      commit("updateListCart", []);
     },
   },
 });

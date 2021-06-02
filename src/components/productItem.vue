@@ -81,7 +81,7 @@
                   }}<font-awesome-icon class="icon" icon="ruble-sign" />
                 </div>
               </div>
-              <div class="number">
+              <!-- <div class="number">
                 <button
                   class="number__minus"
                   type="button"
@@ -97,7 +97,7 @@
                 >
                   +
                 </button>
-              </div>
+              </div> -->
               <button class="btn add" @click="addListCart(product)">
                 В корзину <font-awesome-icon class="icon" icon="cart-plus" />
               </button>
@@ -407,6 +407,7 @@ export default {
           padding: 0px 20px;
           border-radius: 5px;
           cursor: pointer;
+          margin-left: 50px;
           &:hover {
             transform: scale(1.1);
           }
