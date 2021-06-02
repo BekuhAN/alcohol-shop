@@ -8,10 +8,7 @@
           </figure>
         </div>
         <Menu />
-        <div class="cart">
-          <font-awesome-icon class="icon" icon="shopping-basket" />
-          <div class="count">0</div>
-        </div>
+        <Cart />
       </div>
     </div>
   </header>
@@ -19,9 +16,11 @@
 
 <script>
 import Menu from "./menu";
+import Cart from "./cart";
 export default {
   components: {
     Menu,
+    Cart,
   },
 };
 </script>
@@ -38,27 +37,6 @@ export default {
       img {
         width: 100%;
       }
-    }
-  }
-  .cart {
-    font-size: 28px;
-    color: #aaa;
-    position: relative;
-    .count {
-      position: absolute;
-      font-size: 12px;
-      border: 3px solid #fff;
-      background: #e52029;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      line-height: 1;
-      top: -8px;
-      right: -8px;
     }
   }
 }

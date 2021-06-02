@@ -38,7 +38,9 @@
       "image": "product-1.jpg",
       "oldPrice": 53,
       "new": false,
-      "categoryId": 1
+      "categoryId": 1,
+      "isCart": false,
+      "qty": 1
     },
     {
       "id": 2,
@@ -78,7 +80,9 @@
       "image": "product-2.jpg",
       "oldPrice": 0,
       "new": true,
-      "categoryId": 1
+      "categoryId": 1,
+      "isCart": false,
+      "qty": 1
     },
     {
       "id": 3,
@@ -118,7 +122,9 @@
       "image": "product-3.jpg",
       "oldPrice": 0,
       "new": true,
-      "categoryId": 1
+      "categoryId": 1,
+      "isCart": false,
+      "qty": 1
     },
     {
       "id": 4,
@@ -158,7 +164,9 @@
       "image": "product-4.jpg",
       "oldPrice": 77,
       "new": false,
-      "categoryId": 1
+      "categoryId": 1,
+      "isCart": false,
+      "qty": 1
     },
     {
       "id": 5,
@@ -198,7 +206,9 @@
       "image": "product-5.jpg",
       "oldPrice": 56,
       "new": false,
-      "categoryId": 1
+      "categoryId": 1,
+      "isCart": false,
+      "qty": 1
     },
     {
       "id": 6,
@@ -238,7 +248,9 @@
       "image": "product-6.jpg",
       "oldPrice": 0,
       "new": false,
-      "categoryId": 1
+      "categoryId": 1,
+      "isCart": false,
+      "qty": 1
     },
     {
       "id": 7,
@@ -278,7 +290,9 @@
       "image": "product-7.jpg",
       "oldPrice": 0,
       "new": false,
-      "categoryId": 1
+      "categoryId": 1,
+      "isCart": false,
+      "qty": 1
     },
     {
       "id": 8,
@@ -318,7 +332,9 @@
       "image": "product-8.jpg",
       "oldPrice": 0,
       "new": false,
-      "categoryId": 1
+      "categoryId": 1,
+      "isCart": false,
+      "qty": 1
     },
     {
       "id": 9,
@@ -350,7 +366,9 @@
       "image": "product-9.jpg",
       "oldPrice": 0,
       "new": true,
-      "categoryId": 2
+      "categoryId": 2,
+      "isCart": false,
+      "qty": 1
     },
     {
       "id": 10,
@@ -382,7 +400,9 @@
       "image": "product-10.jpeg",
       "oldPrice": 0,
       "new": true,
-      "categoryId": 2
+      "categoryId": 2,
+      "isCart": false,
+      "qty": 1
     },
     {
       "id": 11,
@@ -414,7 +434,9 @@
       "image": "product-11.jpg",
       "oldPrice": 30,
       "new": false,
-      "categoryId": 2
+      "categoryId": 2,
+      "isCart": false,
+      "qty": 1
     },
     {
       "id": 12,
@@ -446,7 +468,9 @@
       "image": "product-12.jpg",
       "oldPrice": 30,
       "new": false,
-      "categoryId": 2
+      "categoryId": 2,
+      "isCart": false,
+      "qty": 1
     },
     {
       "id": 13,
@@ -478,7 +502,9 @@
       "image": "product-13.jpg",
       "oldPrice": 0,
       "new": false,
-      "categoryId": 2
+      "categoryId": 2,
+      "isCart": false,
+      "qty": 1
     },
     {
       "id": 14,
@@ -510,7 +536,9 @@
       "image": "product-14.jpg",
       "oldPrice": 0,
       "new": false,
-      "categoryId": 2
+      "categoryId": 2,
+      "isCart": false,
+      "qty": 1
     },
     {
       "id": 15,
@@ -542,7 +570,9 @@
       "image": "product-15.jpg",
       "oldPrice": 0,
       "new": false,
-      "categoryId": 2
+      "categoryId": 2,
+      "isCart": false,
+      "qty": 1
     },
     {
       "id": 16,
@@ -574,7 +604,9 @@
       "image": "product-16.jpeg",
       "oldPrice": 0,
       "new": false,
-      "categoryId": 2
+      "categoryId": 2,
+      "isCart": false,
+      "qty": 1
     },
     {
       "id": 17,
@@ -606,7 +638,9 @@
       "image": "product-17.jpg",
       "oldPrice": 0,
       "new": true,
-      "categoryId": 3
+      "categoryId": 3,
+      "isCart": false,
+      "qty": 1
     },
     {
       "id": 18,
@@ -638,7 +672,9 @@
       "image": "product-18.jpg",
       "oldPrice": 0,
       "new": true,
-      "categoryId": 3
+      "categoryId": 3,
+      "isCart": false,
+      "qty": 1
     },
     {
       "id": 19,
@@ -670,7 +706,9 @@
       "image": "product-19.jpg",
       "oldPrice": 143,
       "new": false,
-      "categoryId": 3
+      "categoryId": 3,
+      "isCart": false,
+      "qty": 1
     },
     {
       "id": 20,
@@ -702,7 +740,9 @@
       "image": "product-20.jpg",
       "oldPrice": 0,
       "new": false,
-      "categoryId": 3
+      "categoryId": 3,
+      "isCart": false,
+      "qty": 1
     },
     {
       "id": 21,
@@ -734,7 +774,9 @@
       "image": "product-21.jpg",
       "oldPrice": 0,
       "new": false,
-      "categoryId": 3
+      "categoryId": 3,
+      "isCart": false,
+      "qty": 1
     },
     {
       "id": 22,
@@ -766,7 +808,9 @@
       "image": "product-22.jpg",
       "oldPrice": 0,
       "new": false,
-      "categoryId": 3
+      "categoryId": 3,
+      "isCart": false,
+      "qty": 1
     },
     {
       "id": 23,
@@ -798,7 +842,9 @@
       "image": "product-23.jpg",
       "oldPrice": 0,
       "new": false,
-      "categoryId": 4
+      "categoryId": 4,
+      "isCart": false,
+      "qty": 1
     },
     {
       "id": 24,
@@ -830,7 +876,9 @@
       "image": "product-24.jpg",
       "oldPrice": 0,
       "new": false,
-      "categoryId": 4
+      "categoryId": 4,
+      "isCart": false,
+      "qty": 1
     },
     {
       "id": 25,
@@ -862,7 +910,9 @@
       "image": "product-25.jpg",
       "oldPrice": 0,
       "new": false,
-      "categoryId": 4
+      "categoryId": 4,
+      "isCart": false,
+      "qty": 1
     },
     {
       "id": 26,
@@ -894,7 +944,9 @@
       "image": "product-26.jpg",
       "oldPrice": 0,
       "new": false,
-      "categoryId": 4
+      "categoryId": 4,
+      "isCart": false,
+      "qty": 1
     },
     {
       "id": 27,
@@ -926,7 +978,9 @@
       "image": "product-27.jpg",
       "oldPrice": 0,
       "new": false,
-      "categoryId": 4
+      "categoryId": 4,
+      "isCart": false,
+      "qty": 1
     },
     {
       "id": 28,
@@ -958,7 +1012,9 @@
       "image": "product-28.jpg",
       "oldPrice": 0,
       "new": false,
-      "categoryId": 4
+      "categoryId": 4,
+      "isCart": false,
+      "qty": 1
     },
     {
       "id": 29,
@@ -990,7 +1046,9 @@
       "image": "product-29.jpeg",
       "oldPrice": 0,
       "new": true,
-      "categoryId": 5
+      "categoryId": 5,
+      "isCart": false,
+      "qty": 1
     },
     {
       "id": 30,
@@ -1022,7 +1080,9 @@
       "image": "product-30.jpg",
       "oldPrice": 0,
       "new": false,
-      "categoryId": 5
+      "categoryId": 5,
+      "isCart": false,
+      "qty": 1
     },
     {
       "id": 31,
@@ -1054,7 +1114,9 @@
       "image": "product-31.jpg",
       "oldPrice": 0,
       "new": false,
-      "categoryId": 5
+      "categoryId": 5,
+      "isCart": false,
+      "qty": 1
     },
     {
       "id": 32,
@@ -1086,7 +1148,9 @@
       "image": "product-32.png",
       "oldPrice": 0,
       "new": false,
-      "categoryId": 5
+      "categoryId": 5,
+      "isCart": false,
+      "qty": 1
     },
     {
       "id": 33,
@@ -1118,7 +1182,9 @@
       "image": "",
       "oldPrice": 0,
       "new": false,
-      "categoryId": 5
+      "categoryId": 5,
+      "isCart": false,
+      "qty": 1
     },
     {
       "id": 34,
@@ -1150,7 +1216,9 @@
       "image": "",
       "oldPrice": 0,
       "new": false,
-      "categoryId": 5
+      "categoryId": 5,
+      "isCart": false,
+      "qty": 1
     }
   ],
   "categories": [

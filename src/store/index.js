@@ -9,6 +9,7 @@ export default new Vuex.Store({
     listMenu: [],
     listCategories: [],
     listProducts: [],
+    cart: [],
   },
   getters: {
     listMenu(state) {
@@ -20,6 +21,9 @@ export default new Vuex.Store({
     listProducts(state) {
       return state.listProducts;
     },
+    listCart(state) {
+      return state.cart;
+    },
   },
   mutations: {
     updateListMenu(state, payload) {
@@ -30,6 +34,9 @@ export default new Vuex.Store({
     },
     updateListProducts(state, payload) {
       state.listProducts = payload;
+    },
+    updateListCart(state, payload) {
+      state.listCart = payload;
     },
   },
   actions: {
@@ -47,6 +54,11 @@ export default new Vuex.Store({
       axios
         .get("http://localhost:3000/products", { params })
         .then(({ data }) => commit("updateListProducts", data));
+    },
+    addListCart({ state, commit }, item) {
+      let arr = state.cart;
+      arr.push(item);
+      commit("updateListCart", arr);
     },
   },
 });

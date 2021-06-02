@@ -18,6 +18,7 @@ import {
   faRubleSign,
   faShoppingBasket,
   faTimes,
+  faTrashAlt,
   faTruck,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
@@ -51,7 +52,8 @@ library.add(
   faMapMarkerAlt,
   faPhoneAlt,
   faEnvelope,
-  faPaperPlane
+  faPaperPlane,
+  faTrashAlt
 );
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);

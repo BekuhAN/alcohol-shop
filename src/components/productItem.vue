@@ -25,7 +25,7 @@
       <div class="navigate__item product_more" @click="showModal">
         <font-awesome-icon class="icon" icon="eye" />
       </div>
-      <div class="navigate__item product_add">
+      <div class="navigate__item product_add" @click="addListCart(product)">
         <font-awesome-icon class="icon" icon="cart-plus" />
       </div>
     </div>
@@ -89,7 +89,7 @@
                 >
                   -
                 </button>
-                <input type="number" max="200" min="0" value="1" />
+                <input v-model="product.qty" type="number" max="200" min="1" />
                 <button
                   class="number__plus"
                   type="button"
@@ -98,7 +98,7 @@
                   +
                 </button>
               </div>
-              <button class="btn add">
+              <button class="btn add" @click="addListCart(product)">
                 В корзину <font-awesome-icon class="icon" icon="cart-plus" />
               </button>
             </div>
@@ -110,6 +110,8 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
+
 export default {
   props: ["product"],
   data() {
@@ -118,6 +120,7 @@ export default {
     };
   },
   methods: {
+    ...mapActions(["addListCart"]),
     getImgUrl(image) {
       return require("../assets/img/" + image);
     },
